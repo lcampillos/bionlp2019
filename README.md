@@ -11,9 +11,9 @@ python process_orphanet.py es_product1.xml
 ```
 If you use this code, you can make reference to the article where the script was made available, as follows:
 
-  First Steps towards Building a Medical Lexicon for Spanish with Linguistic and Semantic Information
-  Leonardo Campillos-Llanos. 
-  *Proc. of BioNLP 2019*, August 1st, 2019, Florence, Italy.   
+     First Steps towards Building a Medical Lexicon for Spanish with Linguistic and Semantic Information  
+     Leonardo Campillos-Llanos.   
+     *Proc. of BioNLP 2019*, August 1st, 2019, Florence, Italy.   
 
 ```
   @inproceedings{campillos-bionlp2019,   
