@@ -7,9 +7,9 @@
 #  <JDBOR date="2018-07-01 04:07:17" version="1.2.11 / 4.1.6 [2018-04-12] (orientdb version)" copyright="Orphanet (c) 2018">
 #   <DisorderList count="9545">
 #    <Disorder id="102">
-# Term string: <Name lang="es">Epilepsia mioclónica ast?tica</Name>
+# Term string: <Name lang="es">Epilepsia mioclónica astática</Name>
 # Synonyms: <SynonymList count="2">
-#           <Synonym lang="es">Epilepsia miocl?nica progresiva tipo 2</Synonym>
+#           <Synonym lang="es">Epilepsia mioclónica progresiva tipo 2</Synonym>
 #           </SynonymList>
 #
 # Codes in reference terminologies (UMLS cui, codes in terminologies)
@@ -28,7 +28,7 @@
 #               <Source>MedDRA</Source>
 #               <Reference>10071082</Reference>
 #           (...)
-#           <ExternalReference id="11902">  => Puede haber varios elementos OMIM
+#           <ExternalReference id="11902">  
 #                <Source>OMIM</Source>
 #                <Reference>604827</Reference>
 #           (...)
@@ -38,10 +38,7 @@
 #
 # Output:
 #
-#   C0751783|epilepsia mioclónica progresiva tipo 2|epilepsia mioclónica progresiva tipo 2; epilepsias mioclónicas progresivas tipo 2|OMIM:254780;MSHSPA:D020192;MDRSPA:10054030;ICD10SPA2016:G40.3|
-#
-#
-# Note that Python 3 has processed better the UTF8 characters.
+#   C0751783|epilepsia mioclónica progresiva tipo 2|OMIM:254780;MeSH:D020192;MedDRA:10054030;ICD-10:G40.3|
 #
 # NLPMedTerm project, funded by European Union’s Horizon 2020 research and innovation programme
 # Marie Skodowska-Curie grant agreement No. 713366 (Intertalentum UAM)
@@ -51,17 +48,10 @@
 #########################################################################
 
 import re
-import io
-import os
 import sys
-# Use the following lines to avoid encoding errors with UTF8
-#reload(sys)
-#sys.setdefaultencoding('utf8')
-import time
 from xml.etree.ElementTree import parse as ET
 
 # Indicate encoding as 'iso-8859-1' or 'utf-8'
-
 PrintFileName = re.sub("\..+", "", sys.argv[1]) + ".processed"
 
 print("Processing...")
